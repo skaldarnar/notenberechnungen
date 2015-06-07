@@ -8,7 +8,9 @@ function load_header($title, $description) {
 }
 
 function load_footer() {
-	return file_get_contents("../ressourcen/footer.txt");
+    return file_get_contents("../ressourcen/end_form.txt")
+        . file_get_contents("../ressourcen/footer.html")
+        . file_get_contents("../ressourcen/end_document.txt");
 }
 
 function calculate($data, &$module) {
